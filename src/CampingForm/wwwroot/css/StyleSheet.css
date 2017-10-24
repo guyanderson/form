@@ -1,0 +1,14 @@
+﻿body {
+}
+
+.valid {
+color: green;
+}
+
+.invalid {
+color: red;
+}
+
+.short {
+max-width: 300px; 
+}

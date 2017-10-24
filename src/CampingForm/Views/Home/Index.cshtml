@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form>
+    <fieldset>
+        <legend>Camping Form</legend>
+        <label for="name">Name:</label>
+        <input type="text" name="name"/>
+        <br />
+        <br />
+        <label for="description">Campsite description:</label>
+        <textarea name="description">Use JS to remove text</textarea>
+        <br />
+        <br />
+        <label for="shortDescription">Short description:</label>
+        <textarea name="shortDescription">Use JS to remove text</textarea>
+        <br />
+        <br />
+        <label for="scenicRating">Scenic Rating:</label>
+        <select name="scenicRating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <br />
+        <br />
+        <label for="latitude">Latitude:</label>
+        <input type="text" name="latitude" />
+        <br />
+        <br />
+        <label for="longitude">Longitude:</label>
+        <input type="text" name="longitude" />
+        <br />
+        <br />
+        <label for="directions">Directions:</label>
+        <textarea name="directions">Use JS to remove text</textarea>
+        <br />
+        <br />
+        <label for="hiking">Hiking nearby:</label>
+        <input type="radio" name="hiking" value="yes" /> Yes
+        <input type="radio" name="hiking" value="no" /> No
+        <br />
+        <label for="biking">Bycicle routes nearby:</label>
+        <input type="radio" name="biking" value="yes" /> Yes
+        <input type="radio" name="biking" value="no" /> No
+        <br />
+        <label for="fishing">Fishing nearby:</label>
+        <input type="radio" name="fishing" value="yes" /> Yes
+        <input type="radio" name="fishing" value="no" /> No
+        <br />
+        <label for="pet">Pet friendly:</label>
+        <input type="radio" name="pet" value="yes" /> Yes
+        <input type="radio" name="pet" value="no" /> No
+        <br />
+        <label for="playground">Children's playground nearby:</label>
+        <input type="radio" name="playground" value="yes" /> Yes
+        <input type="radio" name="playground" value="no" /> No
+        <br />
+        <label for="handycap">Handicapped accessible:</label>
+        <input type="radio" name="handycap" value="yes" /> Yes
+        <input type="radio" name="handycap" value="no" /> No
+        <br />
+        <label for="recreactionVehical">Recreactionial vehical access:</label>
+        <input type="radio" name="recreactionVehical" value="yes" /> Yes
+        <input type="radio" name="recreactionVehical" value="no" /> No
+        <br />
+        <label for="tent">Tent use:</label>
+        <input type="radio" name="tent" value="yes" /> Yes
+        <input type="radio" name="tent" value="no" /> No
+        <br />
+        <label for="shower">On site showers:</label>
+        <input type="radio" name="shower" value="yes" /> Yes
+        <input type="radio" name="shower" value="no" /> No
+        <br />
+        <label for="restroom">Furnished restrooms:</label>
+        <input type="radio" name="restroom" value="yes" /> Yes
+        <input type="radio" name="restroom" value="no" /> No
+        <br />
+        <label for="portapotty">Port-a-potty:</label>
+        <input type="radio" name="portapotty" value="yes" /> Yes
+        <input type="radio" name="portapotty" value="no" /> No
+        <br />
+        <label for="validated">Last visual data validation date:</label>
+        <input type="date" name="validated" />
+        <br />
+        <input type="submit" value="Save" />
+
+    </fieldset>
+</form>
+

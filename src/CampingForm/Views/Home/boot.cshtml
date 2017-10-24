@@ -1,0 +1,168 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form>
+    <fieldset>
+        <legend>Camping Form</legend>
+        <div class="container">
+            <div class="col-lg-6">
+                <label for="name">Name:</label>
+                <input type="text" name="name" class="form-control short" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Campsite name.'" placeholder="Campsite name." />
+                <br />
+                <br />
+                <label for="description">Campsite description:</label>
+                <textarea name="description" rows="5" class="form-control short" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write a description of the campsite.'" placeholder="Write a description of the campsite."></textarea>
+                <br />
+                <br />
+                <label for="shortDescription">Short description:</label>
+                <textarea name="shortDescription" class="form-control short" onfocus="this.placeholder = ''" onblur="this.placeholder = 'The elevator pitch for the campsite.'" placeholder="The elevator pitch for the campsite."></textarea>
+                <br />
+                <br />
+                <div class="dropdown">
+                    <button class="btn btn-basic dropdown-toggle" type="button" data-toggle="dropdown" name="scenicRating">
+                        @*Not sure where to put name or value*@
+                        Scenic Rating:
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a value="1">1</a></li>
+                        <li><a value="2">2</a></li>
+                        <li><a value="3">3</a></li>
+                        <li><a value="4">4</a></li>
+                        <li><a value="5">5</a></li>
+                        <li><a value="6">6</a></li>
+                        <li><a value="7">7</a></li>
+                        <li><a value="8">8</a></li>
+                        <li><a value="9">9</a></li>
+                        <li><a value="10">10</a></li>
+                    </ul>
+                </div>
+                <br />
+                <br />
+                <label for="latitude">Latitude:</label>
+                <input type="text" name="latitude" class="form-control short" onkeypress="return isNumberKey(event)" />
+                <br />
+                <br />
+                <label for="longitude">Longitude:</label>
+                <input type="text" name="longitude" class="form-control short" onkeypress="return isNumberKey(event)" />
+                <br />
+                <br />
+                <label for="directions">Directions:</label>
+                <textarea name="directions" class="form-control short" onfocus="this.placeholder = ''" onblur="this.placeholder = 'No using fingers to point.'" placeholder="No using fingers to point."></textarea>
+                <br />
+                <br />
+            </div>
+            <div class="col-lg-3">
+                <p>Hiking nearby:</p>
+                <div class="radio">
+                    <label><input type="radio" name="hiking" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="hiking" value="false" />No</label>
+                </div>
+                <br />
+                <p>Bycicle routes nearby:</p>
+                <div class="radio">
+                    <label><input type="radio" name="biking" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="biking" value="false" />No</label>
+                </div>
+                <br />
+                <p>Fishing nearby:</p>
+                <div class="radio">
+                    <label><input type="radio" name="fishing" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="fishing" value="false" />No</label>
+                </div>
+                <br />
+                <p>Pet friendly:</p>
+                <div class="radio">
+                    <label><input type="radio" name="pet" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="pet" value="false" />No</label>
+                </div>
+                <br />
+                <p>Children's playground nearby:</p>
+                <div class="radio">
+                    <label><input type="radio" name="playground" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="playground" value="false" />No</label>
+                </div>
+                <br />
+                <p>Handicapped accessible:</p>
+                <div class="radio">
+                    <label><input type="radio" name="handycap" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="handycap" value="false" />No</label>
+                </div>
+                <br />
+            </div>
+            <div class="col-lg-3">
+                <p>Recreactionial vehical access:</p>
+                <div class="radio">
+                    <label><input type="radio" name="recreactionVehical" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="recreactionVehical" value="false" />No</label>
+                </div>
+                <br />
+                <p>Tent use:</p>
+                <div class="radio">
+                    <label><input type="radio" name="tent" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="tent" value="false" />No</label>
+                </div>
+                <br />
+                <p>On site showers:</p>
+                <div class="radio">
+                    <label><input type="radio" name="shower" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="shower" value="false" />No</label>
+                </div>
+                <br />
+                <p>Furnished restrooms:</p>
+                <div class="radio">
+                    <label><input type="radio" name="restroom" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="restroom" value="false" />No</label>
+                </div>
+                <br />
+                <p>Port-a-potty:</p>
+                <div class="radio">
+                    <label><input type="radio" name="portapotty" value="true" />Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="portapotty" value="false" />No</label>
+                </div>
+                <br />
+                <label for="validated">Last visual data validation date:</label>
+                <input type="date" name="validated" />
+                <br />
+                <br />
+            </div>
+        </div>
+        <input type="submit" value="Save" />
+</fieldset>
+</form>
+<br />
+<br />
+<SCRIPT>
+    function isNumberKey(evt)
+    {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && evt.srcElement.value.split('.').length > 1 && charCode > 31 &&  charCode < 48 || charCode > 57)
+            return false;
+        return true;
+    }
+</SCRIPT>
+ 
